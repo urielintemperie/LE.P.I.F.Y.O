@@ -388,7 +388,7 @@ class GeneralTest extends FlatSpec {
     val programa = Programa(listaOperaciones)
 
     val interprete = new Interprete()
-    
+
     assert(interprete.ejecutar(programa) == Numero(8))
   }
 

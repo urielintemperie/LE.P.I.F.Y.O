@@ -2,7 +2,7 @@ package Lenguaje
 
 class Refactorizador {
 
-  def refactorizarValorableEfectivo(valorable: Valorable): Valorable = { //TODO hacer type dependant para sacar los asInstanceOf[]
+  def refactorizarValorableEfectivo(valorable: Valorable): Valorable = { //TODO ¿Como hacemos que sea type dependant para evitar los asInstanceOf[]?
     valorable match {
       case Suma(n, Numero(0)) => refactorizarValorable(n)
       case Suma(Numero(0), n) => refactorizarValorable(n)
@@ -20,7 +20,7 @@ class Refactorizador {
     }
   }
 
-  def refactorizarValorable(valorable: Valorable) : Valorable = { //TODO hacer type dependant para sacar los asInstanceOf[]
+  def refactorizarValorable(valorable: Valorable) : Valorable = { //TODO ¿Como hacemos que sea type dependant para evitar los asInstanceOf[]?
     valorable match {
       case Suma(n, m) => refactorizarValorableEfectivo(Suma(refactorizarValorable(n).asInstanceOf[ValorableNumerico], refactorizarValorable(m).asInstanceOf[ValorableNumerico]))
       case Resta(n, m) => refactorizarValorableEfectivo(Resta(refactorizarValorable(n).asInstanceOf[ValorableNumerico], refactorizarValorable(m).asInstanceOf[ValorableNumerico]))
