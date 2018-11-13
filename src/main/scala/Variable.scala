@@ -1,6 +1,6 @@
 package Lenguaje
 import scala.collection.mutable.Map
-
+/*
 class Variable(var clave: String, var valor: Option[Evaluable]) extends Expresion
 
 object Variable {
@@ -71,3 +71,4 @@ object Asignar {
   
 }
 
+*/

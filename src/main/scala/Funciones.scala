@@ -1,5 +1,5 @@
 package Lenguaje
-
+/*
 case class Parametro(var param: String) extends Expresion
 
 trait Instruccion{
@@ -48,3 +48,4 @@ class NombreParametrosDuplicados extends Regla{
     }
   }
 }
+*/
