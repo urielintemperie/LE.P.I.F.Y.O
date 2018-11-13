@@ -16,6 +16,7 @@ class Refactorizador {
       case Distinto(Numero(n), Numero(m)) => Booleano(n != m)
       case MenorOIgual(Numero(n), Numero(m)) => Booleano(n <= m)
       case MayorOIgual(Numero(n), Numero(m)) => Booleano(n >= m)
+      case n => n
     }
   }
 
@@ -35,6 +36,6 @@ class Refactorizador {
     }
   }
 
-  def refactorizar(prog: Programa): Programa = Programa(refactorizarValorable(prog.expresion))
+  def refactorizar(prog: Programa): Programa = Programa(prog.expresion.map(refactorizarValorable(_)))
 
 }
